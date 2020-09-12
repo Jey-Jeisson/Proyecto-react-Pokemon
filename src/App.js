@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import NavBar from "./Components/Layout/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Jeisson Gomez</h1>
+      <NavBar />
     </div>
   );
 }
