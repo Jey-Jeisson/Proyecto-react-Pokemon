@@ -1,12 +1,16 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 import NavBar from './Components/Layout/NavBar';
+import Dashboard from './Components/Layout/Dashboard';
 
 function App(){
   return(
     <div className="App">
-      <NavBar />
+      <div className = "container">
+        <Dashboard />
+      </div>
     </div>
   );
 }
