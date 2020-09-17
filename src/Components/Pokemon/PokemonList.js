@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import PokemonCard from './PokemonCard'
+import React, { Component } from 'react';
+import axios from 'axios';
+import PokemonCard from './PokemonCard';
 
 export default class PokemonList extends Component{
     state = {
@@ -9,14 +10,13 @@ export default class PokemonList extends Component{
 
     render() {
         return (
-            <div className = "row">
+            <div>
+            {this.state.pokemon ? (<div className = "row">
+            {this.state.pokemon.map(pokemon => (
                 <PokemonCard />
-                <PokemonCard />
-                <PokemonCard />
-                <PokemonCard />
-                <PokemonCard />
-                <PokemonCard />
-            </div>
+            ))}
+        </div>) : (<h1>Loading pokemon</h1>)}
+        </div>
         )
     }
 }
