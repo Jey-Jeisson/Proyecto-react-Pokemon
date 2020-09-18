@@ -11,11 +11,16 @@ export default class PokemonList extends Component{
     render() {
         return (
             <div>
-            {this.state.pokemon ? (<div className = "row">
+            {this.state.pokemon ? (
+            <div className = "row">
             {this.state.pokemon.map(pokemon => (
                 <PokemonCard />
             ))}
-        </div>) : (<h1>Loading pokemon</h1>)}
+        </div>) : (
+        <h1>
+            Loading pokemon
+        </h1>
+        )}
         </div>
         )
     }
